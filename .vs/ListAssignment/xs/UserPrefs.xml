@@ -1,0 +1,35 @@
+﻿<Properties StartupConfiguration="{2E29ADB7-33F9-44B8-B204-DEBE7758DAB5}|Default">
+  <MonoDevelop.Ide.ItemProperties.ListAssignmentTest PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ListAssignment/StudentList.cs">
+    <Files>
+      <File FileName="ListAssignment/StudentList.cs" Line="64" Column="42" />
+      <File FileName="ListAssignmentTest/Test.cs" Line="81" Column="1" />
+      <File FileName="ListAssignment/Student.cs" Line="35" Column="2" />
+      <File FileName="ListAssignmentTest/ExerciseTest.cs" Line="17" Column="36" />
+    </Files>
+    <Pads>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="ListAssignment" expanded="True">
+            <Node name="ListAssignmentTest" expanded="True">
+              <Node name="ListAssignmentTest" expanded="True">
+                <Node name="Test" expanded="True">
+                  <Node name="TestReplace" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/saman/Downloads/ListAssignment/ListAssignment/ListAssignmentTest/Test.cs" relfile="ListAssignmentTest/Test.cs" line="81" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.ListAssignment PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>
