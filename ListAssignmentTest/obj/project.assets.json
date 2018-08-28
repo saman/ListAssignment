@@ -5734,11 +5734,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/saman/Downloads/ListAssignment/ListAssignment/ListAssignmentTest/ListAssignmentTest.csproj",
+      "projectUniqueName": "/Users/saman/Projects/ListAssignment/ListAssignmentTest/ListAssignmentTest.csproj",
       "projectName": "ListAssignmentTest",
-      "projectPath": "/Users/saman/Downloads/ListAssignment/ListAssignment/ListAssignmentTest/ListAssignmentTest.csproj",
+      "projectPath": "/Users/saman/Projects/ListAssignment/ListAssignmentTest/ListAssignmentTest.csproj",
       "packagesPath": "/Users/saman/.nuget/packages/",
-      "outputPath": "/Users/saman/Downloads/ListAssignment/ListAssignment/ListAssignmentTest/obj",
+      "outputPath": "/Users/saman/Projects/ListAssignment/ListAssignmentTest/obj",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -5755,8 +5755,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "/Users/saman/Downloads/ListAssignment/ListAssignment/ListAssignment/ListAssignment.csproj": {
-              "projectPath": "/Users/saman/Downloads/ListAssignment/ListAssignment/ListAssignment/ListAssignment.csproj"
+            "/Users/saman/Projects/ListAssignment/ListAssignment/ListAssignment.csproj": {
+              "projectPath": "/Users/saman/Projects/ListAssignment/ListAssignment/ListAssignment.csproj"
             }
           }
         }

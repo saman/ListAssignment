@@ -25,7 +25,7 @@ namespace ListAssignmentTest
         {
             var list = CreateList();
             _students.ForEach(list.AddAtEnd);
-
+            List<Student> a = list.ToList();
             Assert.True(list.IsSameAs(_students));
         }
 
@@ -139,7 +139,7 @@ namespace ListAssignmentTest
             }
         }
 
-        private static List<Student> ToList(this IStudentList list) =>
+        internal static List<Student> ToList(this IStudentList list) =>
             Enumerable.Range(0, list.Length()).Select(list.GetStudentAt).ToList();
 
         internal static bool IsSameAs(this IStudentList a, IEnumerable<Student> b) =>

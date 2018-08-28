@@ -5,8 +5,6 @@ namespace ListAssignment
     public class Student
     {
 
-        public Student next = null;
-
         // The name of the student
         public string Name { get; }
 
@@ -22,7 +20,6 @@ namespace ListAssignment
         // Constructor
         public Student(string name, int age, int maNumber, double grade)
         {
-            next = null;
             Name = name;
             Age = age;
             MatriculationNumber = maNumber;

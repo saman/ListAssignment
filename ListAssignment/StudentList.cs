@@ -1,32 +1,49 @@
 ﻿using System;
 using System.Diagnostics;
+using System.IO;
 
 namespace ListAssignment
 {
+    public class Node
+    {
+        public Node next;
+        public Student data;
+    }
+
     public class StudentList : IStudentList
     {
-        private Student head = null;
+        Node head;
 
         public void AddAtEnd(Student student)
         {
+            Node node = new Node();
 
-            int len = this.Length();
-            if (len > 0)
+            if (head != null)
             {
-                int LastIndex = len - 1;
-                Student last = this.GetStudentAt(LastIndex);
-                last.next = student;
-            } else {
-                head = student;
+                Node current = head;
+                while (current.next != null)
+                {
+                    current = current.next;
+                }
+                node.data = student;
+                node.next = null;
+                current.next = node;
             }
-
+            else
+            {
+                node.data = student;
+                node.next = head;
+                head = node;
+            }
         }
 
         public void AddAtStart(Student student)
         {
-            Student ToAdd = student;
-            ToAdd.next = head;
-            head = ToAdd;
+            Node node = new Node();
+            node.data = student;
+            node.next = head;
+
+            head = node;
         }
 
         public Student RemoveFirst()
@@ -34,7 +51,7 @@ namespace ListAssignment
             Student RemovedStudent = null;
             if (head != null)
             {
-                RemovedStudent = head;
+                RemovedStudent = head.data;
                 head = head.next;
             }
             return RemovedStudent;
@@ -42,43 +59,57 @@ namespace ListAssignment
 
         public void PrintList()
         {
-            Student current = head;
+            Node current = head;
             while (current != null)
             {
-                Console.Write(current.Name + ", ");
-                Console.Write(current.Age + ", ");
-                Console.Write(current.MatriculationNumber + ", ");
-                Console.WriteLine("{0:F1}", current.Grade);
+                Console.Write(current.data.Name + ", ");
+                Console.Write(current.data.Age + ", ");
+                Console.Write(current.data.MatriculationNumber + ", ");
+                Console.WriteLine("{0:F1}", current.data.Grade);
                 current = current.next;
             }
         }
 
         public void Replace(object studentIdentifier, Student newStudent)
         {
-            Student current = head;
+            Node current = head;
             while (current != null)
             {
-                if (studentIdentifier == current.Identifier)
+                if (studentIdentifier.Equals(current.data.Identifier))
                 {
-                    newStudent.next = current.next;
-                    current = newStudent;
+                    current.data = newStudent;
+                    break;
                 }
+                current = current.next;
             }
         }
 
         public void ReadFromFile(string file)
         {
-            throw new System.NotImplementedException();
+            foreach (string line in File.ReadLines(file))
+            {
+                string newLine = line.Replace("  ", " ");
+                if (newLine.Length > 0)
+                {
+                    Student student = new Student(
+                        newLine.Split()[0], // Name
+                        Int32.Parse(newLine.Split()[1]), // Age
+                        Int32.Parse(newLine.Split()[2]), // MatriculationNumber
+                        Double.Parse(newLine.Split()[3]) // Grade
+                    );
+                    this.AddAtEnd(student);
+                }
+            }
         }
 
         public Student GetStudentAt(int index)
         {
             int count = 0;
-            Student current = head;
+            Node current = head;
             while (current != null)
             {
                 if (index == count) {
-                    return current;
+                    return current.data;
                 }
                 current = current.next;
                 count++;
@@ -89,7 +120,7 @@ namespace ListAssignment
         public int Length()
         {
             int count = 0;
-            Student current = head;
+            Node current = head;
             while (current != null)
             {
                 current = current.next;

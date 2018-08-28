@@ -3,3 +3,9 @@
 /Users/saman/Downloads/ListAssignment/ListAssignment/ListAssignment/obj/Debug/ListAssignment.csproj.CoreCompileInputs.cache
 /Users/saman/Downloads/ListAssignment/ListAssignment/ListAssignment/obj/Debug/ListAssignment.exe
 /Users/saman/Downloads/ListAssignment/ListAssignment/ListAssignment/obj/Debug/ListAssignment.pdb
+/Users/saman/Projects/ListAssignment/ListAssignment/bin/Debug/ListAssignment.exe
+/Users/saman/Projects/ListAssignment/ListAssignment/bin/Debug/ListAssignment.pdb
+/Users/saman/Projects/ListAssignment/ListAssignment/obj/Debug/ListAssignment.csprojAssemblyReference.cache
+/Users/saman/Projects/ListAssignment/ListAssignment/obj/Debug/ListAssignment.csproj.CoreCompileInputs.cache
+/Users/saman/Projects/ListAssignment/ListAssignment/obj/Debug/ListAssignment.exe
+/Users/saman/Projects/ListAssignment/ListAssignment/obj/Debug/ListAssignment.pdb
