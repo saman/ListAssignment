@@ -1,27 +1,31 @@
 ﻿<Properties StartupConfiguration="{2E29ADB7-33F9-44B8-B204-DEBE7758DAB5}|Default">
   <MonoDevelop.Ide.ItemProperties.ListAssignmentTest PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ListAssignment/StudentList.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ListAssignmentTest/ExerciseTest.cs">
     <Files>
-      <File FileName="ListAssignment/StudentList.cs" Line="9" Column="6" />
-      <File FileName="ListAssignmentTest/Test.cs" Line="29" Column="1" />
-      <File FileName="ListAssignment/Student.cs" Line="22" Column="10" />
-      <File FileName="ListAssignmentTest/ExerciseTest.cs" Line="1" Column="1" />
-      <File FileName="ListAssignment/IStudentList.cs" Line="1" Column="1" />
+      <File FileName="ListAssignment/StudentList.cs" Line="101" Column="18" />
+      <File FileName="ListAssignmentTest/Test.cs" Line="7" Column="13" />
+      <File FileName="ListAssignment/Student.cs" Line="28" Column="9" />
+      <File FileName="ListAssignmentTest/ExerciseTest.cs" Line="17" Column="13" />
     </Files>
     <Pads>
       <Pad Id="MonoDevelop.UnitTesting.TestPad">
         <State name="__root__">
-          <Node name="ListAssignment" expanded="True" selected="True" />
+          <Node name="ListAssignment" expanded="True">
+            <Node name="ListAssignmentTest" expanded="True">
+              <Node name="ListAssignmentTest" expanded="True">
+                <Node name="Test" expanded="True">
+                  <Node name="TestReadFromFile" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/saman/Projects/ListAssignment/ListAssignmentTest/Test.cs" relfile="ListAssignmentTest/Test.cs" line="81" column="1" />
-      <Breakpoint file="/Users/saman/Projects/ListAssignment/ListAssignmentTest/Test.cs" relfile="ListAssignmentTest/Test.cs" line="29" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />

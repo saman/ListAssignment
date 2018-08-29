@@ -4,7 +4,6 @@ namespace ListAssignment
 {
     public class Student
     {
-
         // The name of the student
         public string Name { get; }
 
@@ -26,7 +25,6 @@ namespace ListAssignment
             Grade = grade;
         }
 
-        // TODO Implement this getter
         public object Identifier => this.MatriculationNumber;
     }
 }

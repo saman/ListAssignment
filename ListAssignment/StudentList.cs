@@ -18,6 +18,7 @@ namespace ListAssignment
         {
             Node node = new Node();
 
+            //If the list was not empty find the last one and add the new student
             if (head != null)
             {
                 Node current = head;
@@ -39,6 +40,7 @@ namespace ListAssignment
 
         public void AddAtStart(Student student)
         {
+            //Swaping head with the new student
             Node node = new Node();
             node.data = student;
             node.next = head;
@@ -48,23 +50,27 @@ namespace ListAssignment
 
         public Student RemoveFirst()
         {
-            Student RemovedStudent = null;
+            //Removing the head and set the second one as the head
             if (head != null)
             {
-                RemovedStudent = head.data;
+                Student RemovedStudent = head.data;
                 head = head.next;
+                return RemovedStudent;
+            } else {
+                // Throw exception if the there is no student
+                throw new System.ArgumentException("No student exists");
             }
-            return RemovedStudent;
         }
 
         public void PrintList()
         {
+            //Print whole list one by one in a proper format 
             Node current = head;
             while (current != null)
             {
-                Console.Write(current.data.Name + ", ");
-                Console.Write(current.data.Age + ", ");
-                Console.Write(current.data.MatriculationNumber + ", ");
+                Console.Write(current.data.Name + " ");
+                Console.Write(current.data.Age + " ");
+                Console.Write(current.data.MatriculationNumber + " ");
                 Console.WriteLine("{0:F1}", current.data.Grade);
                 current = current.next;
             }
@@ -72,6 +78,7 @@ namespace ListAssignment
 
         public void Replace(object studentIdentifier, Student newStudent)
         {
+            //Checking all nodes until find the student
             Node current = head;
             while (current != null)
             {
@@ -82,43 +89,61 @@ namespace ListAssignment
                 }
                 current = current.next;
             }
+
+            //Throw exception if the student doesn't exist
+            if (current == null) {
+                throw new System.ArgumentException("No student with the specified attribute value exists");
+            }
         }
 
         public void ReadFromFile(string file)
         {
-            foreach (string line in File.ReadLines(file))
+            if (File.Exists(file))
             {
-                string newLine = line.Replace("  ", " ");
-                if (newLine.Length > 0)
+                //Making sure the list will be empty
+                head = null;
+
+                //Read file line by line in case of too much records
+                foreach (string line in File.ReadLines(file))
                 {
-                    Student student = new Student(
-                        newLine.Split()[0], // Name
-                        Int32.Parse(newLine.Split()[1]), // Age
-                        Int32.Parse(newLine.Split()[2]), // MatriculationNumber
-                        Double.Parse(newLine.Split()[3]) // Grade
-                    );
-                    this.AddAtEnd(student);
+                    //Remove all extra spaces
+                    string newLine = line.Replace("  ", " ").Trim();
+                    if (newLine.Length > 0)
+                    {
+                        //Make student based on string data
+                        Student student = new Student(
+                            newLine.Split()[0], // Name
+                            Int32.Parse(newLine.Split()[1]), // Age
+                            Int32.Parse(newLine.Split()[2]), // MatriculationNumber
+                            Double.Parse(newLine.Split()[3]) // Grade
+                        );
+
+                        //Finally add the student to the list
+                        this.AddAtEnd(student);
+                    }
                 }
             }
         }
 
         public Student GetStudentAt(int index)
         {
-            int count = 0;
+            //Use i as index of the list and checking all nodes
+            int i = 0;
             Node current = head;
             while (current != null)
             {
-                if (index == count) {
+                if (index == i) {
                     return current.data;
                 }
                 current = current.next;
-                count++;
+                i++;
             }
             return null;
         }
 
         public int Length()
         {
+            //Use a counter for counting the length of whole list
             int count = 0;
             Node current = head;
             while (current != null)

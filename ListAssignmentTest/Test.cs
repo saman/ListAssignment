@@ -5,7 +5,6 @@ using System.Linq;
 using System.Text;
 using ListAssignment;
 using Xunit;
-using System.Diagnostics;
 
 namespace ListAssignmentTest
 {
@@ -25,7 +24,7 @@ namespace ListAssignmentTest
         {
             var list = CreateList();
             _students.ForEach(list.AddAtEnd);
-            List<Student> a = list.ToList();
+
             Assert.True(list.IsSameAs(_students));
         }
 
@@ -64,7 +63,7 @@ namespace ListAssignmentTest
             Assert.Contains("123", output);
             Assert.Contains("2.0", output);
 
-            var standardOutput = new StreamWriter(Console.OpenStandardOutput()) {AutoFlush = true};
+            var standardOutput = new StreamWriter(Console.OpenStandardOutput()) { AutoFlush = true };
             Console.SetOut(standardOutput);
         }
 
@@ -75,7 +74,7 @@ namespace ListAssignmentTest
             _students.ForEach(list.AddAtEnd);
 
             var newAdrian = new Student("Adrian", 20, 123, 3.0);
-            var studentsReplaced = new List<Student>(_students) {[0] = newAdrian};
+            var studentsReplaced = new List<Student>(_students) { [0] = newAdrian };
             list.Replace(newAdrian.Identifier, newAdrian);
 
             Assert.True(list.IsSameAs(studentsReplaced));
@@ -104,10 +103,11 @@ namespace ListAssignmentTest
         }
 
         [Fact]
-        public void TestLengths()
+        public void TestLength()
         {
             var list = CreateList();
             _students.ForEach(list.AddAtEnd);
+
             Assert.Equal(list.Length(), _students.Count);
         }
     }
@@ -139,7 +139,7 @@ namespace ListAssignmentTest
             }
         }
 
-        internal static List<Student> ToList(this IStudentList list) =>
+        private static List<Student> ToList(this IStudentList list) =>
             Enumerable.Range(0, list.Length()).Select(list.GetStudentAt).ToList();
 
         internal static bool IsSameAs(this IStudentList a, IEnumerable<Student> b) =>
