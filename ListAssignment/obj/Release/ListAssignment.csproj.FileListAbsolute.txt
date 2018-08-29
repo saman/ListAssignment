@@ -1,5 +1,0 @@
-/Users/saman/Downloads/ListAssignment/ListAssignment/ListAssignment/bin/Release/ListAssignment.exe
-/Users/saman/Downloads/ListAssignment/ListAssignment/ListAssignment/bin/Release/ListAssignment.pdb
-/Users/saman/Downloads/ListAssignment/ListAssignment/ListAssignment/obj/Release/ListAssignment.csproj.CoreCompileInputs.cache
-/Users/saman/Downloads/ListAssignment/ListAssignment/ListAssignment/obj/Release/ListAssignment.exe
-/Users/saman/Downloads/ListAssignment/ListAssignment/ListAssignment/obj/Release/ListAssignment.pdb
